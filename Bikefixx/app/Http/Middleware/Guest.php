@@ -13,7 +13,7 @@ class Guest
             return response()->json([
                 'sucesso' => false,
                 'mensagem' => 'Usuário já autenticado'
-            ], 400);
+            ], 403);
         }
 
         return $next($request);

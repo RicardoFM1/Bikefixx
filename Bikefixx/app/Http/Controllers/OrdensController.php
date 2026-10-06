@@ -115,12 +115,7 @@ class OrdensController extends Controller
             $dadosValidados = $this->validate($request, OrdensDeServico::regras(true), OrdensDeServico::mensagens());
             $dadosValidados['data_e_hora_abertura'] = Carbon::now()->format('Y-m-d H:i:s');
 
-            if (empty($request->input('mecanico_id'))) {
-                return response()->json([
-                    'sucesso' => false,
-                    'mensagem' => 'Não é possível atualizar uma ordem de serviço sem um mecânico'
-                ], 409);
-            }
+            
             $usuarioLogado = $request->auth;
             $dadosValidados['mecanico_id'] = $usuarioLogado['id'];
 
