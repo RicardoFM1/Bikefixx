@@ -121,7 +121,8 @@ class OrdensController extends Controller
                     'mensagem' => 'Não é possível atualizar uma ordem de serviço sem um mecânico'
                 ], 409);
             }
-
+            $usuarioLogado = $request->auth;
+            $dadosValidados['mecanico_id'] = $usuarioLogado['id'];
 
 
             $os->update($dadosValidados);

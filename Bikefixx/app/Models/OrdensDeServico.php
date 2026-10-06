@@ -26,13 +26,12 @@ class OrdensDeServico extends Model
             return [
                 'status' => 'sometimes',
                 'data_e_hora_abertura' => 'sometimes',
-                'bicicleta_id' => 'sometimes|integer',
-                'mecanico_id' => 'sometimes|integer'
+                'bicicleta_id' => 'sometimes|integer'
             ];
         }
 
         return [
-            'bicicleta_id' => 'required|integer',
+            'bicicleta_id' => 'required|integer'
         ];
     }
 
