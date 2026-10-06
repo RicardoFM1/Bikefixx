@@ -15,7 +15,8 @@ class Usuarios extends Model
         'nome',
         'email',
         'senha',
-        'perfil'
+        'perfil',
+        'token'
     ];
 
     public function clientes()

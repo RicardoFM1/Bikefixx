@@ -19,7 +19,7 @@ class Mecanicos extends Model
 
     public function usuarios()
     {
-        return $this->hasOne(Usuarios::class, 'usuario_id', 'id');
+        return $this->hasOne(Usuarios::class, 'id', 'usuario_id');
     }
 
     public function ordens_de_servico()

@@ -19,6 +19,31 @@ class OrdensDeServico extends Model
         'mecanico_id'
     ];
 
+    public static function regras($atualizando = false)
+    {
+
+        if ($atualizando) {
+            return [
+                'status' => 'sometimes',
+                'data_e_hora_abertura' => 'sometimes',
+                'bicicleta_id' => 'sometimes|integer',
+                'mecanico_id' => 'sometimes|integer'
+            ];
+        }
+
+        return [
+            'bicicleta_id' => 'required|integer',
+        ];
+    }
+
+    public static function mensagens()
+    {
+        return [
+            'bicicleta_id.required' => 'A referência da bicicleta é obrigatória',
+            'bicicleta_id.integer' => 'A referência da bicicleta deve ser um número inteiro',
+        ];
+    }
+
     public function mecanicos()
     {
         return $this->belongsTo(Mecanicos::class, 'mecanico_id', 'id');

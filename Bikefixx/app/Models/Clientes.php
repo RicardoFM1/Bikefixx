@@ -17,15 +17,18 @@ class Clientes extends Model
         'endereco_id'
     ];
 
-    public function enderecos (){
-        return $this->hasOne(Enderecos::class, 'endereco_id', 'id');
+    public function enderecos()
+    {
+        return $this->hasOne(Enderecos::class, 'id', 'endereco_id');
     }
 
-    public function usuarios (){
-        return $this->hasOne(Usuarios::class, 'usuario_id', 'id');
+    public function usuarios()
+    {
+        return $this->hasOne(Usuarios::class, 'id', 'usuario_id');
     }
 
-    public function bicicletas (){
+    public function bicicletas()
+    {
         return $this->hasMany(Bicicletas::class, 'cliente_id', 'id');
     }
 }
