@@ -1,0 +1,375 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: My Collection
+meta:
+  id: wrk_329fe0b3b8c44908acf6f5a0996ee31b
+  created: 1789568500081
+  modified: 1789568500081
+  description: ""
+collection:
+  - name: TA2
+    meta:
+      id: fld_c39f60559f67453191ddfb17308ea9c5
+      created: 1789568423423
+      modified: 1790858380686
+      sortKey: -1789568423423
+      description: ""
+    children:
+      - name: Usuario
+        meta:
+          id: fld_f71fbedd725347b38d679f5e075100ac
+          created: 1790858413262
+          modified: 1790858431784
+          sortKey: -1790858413262
+          description: ""
+      - name: Tag
+        meta:
+          id: fld_42a65aa1bcd940798a1a1c93aac7be5c
+          created: 1790859364893
+          modified: 1790859376130
+          sortKey: -1790213418342.5
+          description: ""
+      - name: Dashboard
+        meta:
+          id: fld_ce41eb4be8e54d5781eb678ed90d41e2
+          created: 1790865617514
+          modified: 1790865617514
+          sortKey: -1790865617514
+          description: ""
+      - name: Cliente
+        meta:
+          id: fld_97ce22f408444843a71d945b4a17b092
+          created: 1790867735462
+          modified: 1790867820210
+          sortKey: -1790535915802.25
+          description: ""
+      - name: Mensagem Contato
+        meta:
+          id: fld_f9fecca207f044a9b85ac3f4c90f3b35
+          created: 1790867869614
+          modified: 1790867869614
+          sortKey: -1790374667072.375
+          description: ""
+      - name: Fase
+        meta:
+          id: fld_a623b9fa257849d7b8e2d414f326306d
+          created: 1790867919989
+          modified: 1790867919989
+          sortKey: -1789890920882.75
+          description: ""
+      - name: Arquivo
+        meta:
+          id: fld_a990e5baad224623bde79224afc1886f
+          created: 1790867961599
+          modified: 1790867961599
+          sortKey: -1789729672152.875
+          description: ""
+      - name: Comentario
+        meta:
+          id: fld_8d5bc791b777486190e9b4b5c21b0503
+          created: 1790867996901
+          modified: 1790867996901
+          sortKey: -1789649047787.9375
+          description: ""
+      - name: Caso
+        meta:
+          id: fld_2493d557cbb8408796b322a3ba69dc5d
+          created: 1790868043323
+          modified: 1790869196822
+          sortKey: -1789608735605.4688
+          description: ""
+      - name: Dado Pessoal
+        meta:
+          id: fld_59d928c738b24fc68089bb5dbb4569a3
+          created: 1790868085284
+          modified: 1790875407627
+          sortKey: -1789588579514.2344
+          description: ""
+      - name: Habilidade
+        meta:
+          id: fld_7599faada7184ac58216ef3a0091e873
+          created: 1790868175043
+          modified: 1790868175043
+          sortKey: -1789578501468.6172
+          description: ""
+      - name: Rede social
+        meta:
+          id: fld_eb956f4d429c44ecb497e32895b33243
+          created: 1790868203079
+          modified: 1790868203079
+          sortKey: -1789573462445.8086
+          description: ""
+      - name: Ferramenta
+        meta:
+          id: fld_1e5e3047f494465ca122ace7feb5fa6c
+          created: 1790868252382
+          modified: 1790868252382
+          sortKey: -1789570942934.4043
+          description: ""
+      - name: Servico
+        meta:
+          id: fld_a2bfb7ab789940c49ebf0ee633bcbb0d
+          created: 1790868282848
+          modified: 1790868306103
+          sortKey: -1789569683178.7021
+          description: ""
+      - name: Depoimento
+        meta:
+          id: fld_c78c8f3e000b4e2791cc1bd6b9dbff24
+          created: 1790868310498
+          modified: 1790868310498
+          sortKey: -1789569053300.851
+          description: ""
+      - name: Projeto
+        meta:
+          id: fld_c71faf10aa2044dd85eb307cbf6c5862
+          created: 1790868377177
+          modified: 1790869931391
+          sortKey: -1789628891696.7031
+          description: ""
+  - name: Bikefix
+    meta:
+      id: fld_7104fe5e9e854b21b81f7da6b07a1d52
+      created: 1791312873041
+      modified: 1791312873041
+      sortKey: -1791312873041
+      description: ""
+    children:
+      - name: Ordens
+        meta:
+          id: fld_2d07940355bb40859a54fa95775ccd42
+          created: 1791312889085
+          modified: 1791312889085
+          sortKey: -1791312889085
+          description: ""
+        children:
+          - url: http://localhost:3000/ordens
+            name: /ordens
+            meta:
+              id: req_bafd98428ce348a1a3d4933aa625db66
+              created: 1791312878714
+              modified: 1791317220755
+              isPrivate: false
+              description: ""
+              sortKey: -1791312891046
+            method: GET
+            authentication:
+              type: bearer
+              token: "{% response 'body', 'req_183e214977e24aa9b2593104a7d81ff0',
+                'b64::JC4udG9rZW4=::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/ordens/5
+            name: /ordens/{ordemId}
+            meta:
+              id: req_7094df146e104af9b8493547b3209e91
+              created: 1791312966433
+              modified: 1791317326890
+              isPrivate: false
+              description: ""
+              sortKey: -1791089255609
+            method: GET
+            authentication:
+              type: bearer
+              token: "{% response 'body', 'req_183e214977e24aa9b2593104a7d81ff0',
+                'b64::JC4udG9rZW4=::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/ordens
+            name: /ordens
+            meta:
+              id: req_71881355533a4fdf944da9610f83e70a
+              created: 1791312975699
+              modified: 1791317400416
+              isPrivate: false
+              description: ""
+              sortKey: -1790977437890.5
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"bicicleta_id": 1
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              token: "{% response 'body', 'req_183e214977e24aa9b2593104a7d81ff0',
+                'b64::JC4udG9rZW4=::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/ordens/5
+            name: /ordens/{ordemId}
+            meta:
+              id: req_d3a84ec50ece48e9941422f5badebcee
+              created: 1791313076532
+              modified: 1791317415999
+              isPrivate: false
+              description: ""
+              sortKey: -1790921529031.25
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"bicicleta_id": 1
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              token: "{% response 'body', 'req_183e214977e24aa9b2593104a7d81ff0',
+                'b64::JC4udG9rZW4=::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/ordens/1
+            name: /ordens/{ordemId}
+            meta:
+              id: req_aac3b9bee4664ba186078c2a3ec5d629
+              created: 1791313084607
+              modified: 1791317278466
+              isPrivate: false
+              description: ""
+              sortKey: -1790893574601.625
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              token: "{% response 'body', 'req_183e214977e24aa9b2593104a7d81ff0',
+                'b64::JC4udG9rZW4=::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/ordens/proprias
+            name: /ordens/proprias
+            meta:
+              id: req_4a35dbfbf37a4df0a50751afb90a2bc7
+              created: 1791317072643
+              modified: 1791317231704
+              isPrivate: false
+              description: ""
+              sortKey: -1791201073327.5
+            method: GET
+            authentication:
+              type: bearer
+              token: "{% response 'body', 'req_183e214977e24aa9b2593104a7d81ff0',
+                'b64::JC4udG9rZW4=::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Usuarios
+        meta:
+          id: fld_eace745050bb4de394f95d8352a183cb
+          created: 1791313167308
+          modified: 1791313167308
+          sortKey: -1791313167308
+          description: ""
+        children:
+          - url: http://localhost:3000/usuarios
+            name: /usuarios
+            meta:
+              id: req_2d15cf3ed04e4765912e49826cc89f18
+              created: 1791313909821
+              modified: 1791317203756
+              isPrivate: false
+              description: ""
+              sortKey: -1791313909821
+            method: GET
+            authentication:
+              type: bearer
+              token: "{% response 'body', 'req_183e214977e24aa9b2593104a7d81ff0',
+                'b64::JC4udG9rZW4=::46b', 'never', 60 %}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/usuarios/login
+            name: /usuarios/login
+            meta:
+              id: req_183e214977e24aa9b2593104a7d81ff0
+              created: 1791313954914
+              modified: 1791317308014
+              isPrivate: false
+              description: ""
+              sortKey: -1791313400433.5
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"email": "roberto@bikefix.com",
+                	"senha": "bike123"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              token: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_fd06e9a9a10348709be601001e58141e
+    created: 1789568411647
+    modified: 1789568411647
+environments:
+  name: Base Environment
+  meta:
+    id: env_8bb42aa79f0243afa3fea98d8a01427a
+    created: 1789568411645
+    modified: 1789568411645
+    isPrivate: false
