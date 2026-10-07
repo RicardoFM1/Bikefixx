@@ -20,21 +20,21 @@ php -S localhost:3000 -t public
 
 Usuário
 
-| Rota           | Método |
-|----------------|--------|
-| /usuario       | GET    |
-| /usuario/login | POST   |
+| Rota           | Método | Perfil | Autenticação |
+|----------------|--------|--------|
+| /usuario       | GET    |  Nenhum  |
+| /usuario/login | POST   |  Guest      |
 
 
 ---
 
 Ordens
 
-| Rota              | Método |
-|-------------------|--------|
-| /ordens           | GET    |
-| /ordens/proprias  | GET    |
-| /ordens/{ordemId} | GET    |
-| /ordens           | POST   |
-| /ordens           | PATCH  |
-| /ordens/{ordemId} | DELETE |
+| Rota              | Método | Perfil            | Status Esperado |
+|-------------------|--------|-------------------|-----------------|
+| /ordens           | GET    | Admin, Mecanico   | 200             |
+| /ordens/proprias  | GET    | Cliente, Mecanico | 200             |
+| /ordens/{ordemId} | GET    | Admin             | 200             |
+| /ordens           | POST   | Mecanico, Admin   | 201             |
+| /ordens/{ordemId} | PATCH  | Mecanico, Admin   | 200             |
+| /ordens/{ordemId} | DELETE | Admin             | 200             |
